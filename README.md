@@ -9,7 +9,7 @@ The service retrieves weather data for a city chosen by the user and runs inside
 
 ## Weather API Used
 
-Open-Meteo API 
+**Open-Meteo API**
 
 https://open-meteo.com/
 
@@ -23,7 +23,7 @@ No environment variables are required because Open-Meteo API is free and does no
 
 ---
 
-## How to build and run using Docker
+## How to Build and Run Using Docker
 
 ### 1. Create Dockerfile
 
@@ -39,24 +39,46 @@ WORKDIR /app
 EXPOSE 8080
 
 CMD php -S 0.0.0.0:8080
+```
 
-2. Build Docker image
+### 2. Build Docker Image
+
+```bash
 docker build -t weather-service .
+```
 
-3. Run the container
+### 3. Run the Container
+
+```bash
 docker run -p 8080:8080 weather-service
+```
 
-4. Access the service
+### 4. Access the Service
+
+```
 http://localhost:8080/weather.php?city=Gaza
+```
 
+---
 
-How to test
+## How to Test
 
-Example using browser:
+### Example using browser:
+
+```
 http://localhost:8080/weather.php?city=Gaza
+```
 
-Example using curl:
+### Example using curl:
+
+```bash
 curl "http://localhost:8080/weather.php?city=Gaza"
+```
 
-How to Stop the Container
-I have mac so Command + C but in windows CTRL + C 
+---
+
+## How to Stop the Container
+
+- **macOS/Linux**: `Command + C` or `Ctrl + C`
+- **Windows**: `Ctrl + C`
+
